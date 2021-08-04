@@ -1,0 +1,48 @@
+header {
+    background-color: rgb(153, 102, 82);
+    width: 100%;
+    height: 120px;
+    box-shadow: 2px 5px 11px 1px rgb(110, 70, 54)
+}
+
+div.logo-container {
+    width: 10%;
+    float: left;
+}
+
+img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    border-radius: 50px;
+}
+
+nav {
+    float: left;
+    width: 45%;
+    margin-top: 25px;
+}
+
+div.user-navbar {
+    float: left;
+    width: 45%;
+    margin-top: 25px;
+}
+
+header ul {
+    align-items: center;
+    list-style-type: none;
+}
+
+header li {
+    float: left;
+}
+
+header a {
+    cursor: pointer;
+    padding: 8px 16px;
+}
+header a:hover {
+    background-color: rgb(173, 130, 113);
+}
