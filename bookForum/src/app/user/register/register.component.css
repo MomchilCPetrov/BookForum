@@ -1,0 +1,70 @@
+form.register {
+    width: 40%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.register fieldset {
+    border-radius: 10px;
+    background-color: rgb(153, 102, 82);
+    border: 1px solid rgb(110, 70, 54);
+    padding: 30px;
+}
+
+.register p {
+    padding-bottom: 0;
+    padding-top: 1.5rem;
+}
+
+.field {
+    margin: auto;
+}
+
+.register input {
+    border: 1px solid rgb(110, 70, 54);
+    border-radius: 2px;
+    background-color:rgb(206, 184, 176);
+    width: 70%;
+    height: 30px;
+    float: right;
+}
+
+.register button {
+    color: black;
+    border: 1px solid rgb(110, 70, 54);
+    border-radius: 0.3em;
+    margin-top: 40px;
+    width: 60%;
+    background-color: rgb(173, 130, 113);
+    height: 40px;
+    font-size: 25px;
+}
+
+.register button:hover {
+    cursor: pointer;
+    background-color: rgb(149, 109, 92);;
+}
+
+.register a {
+    cursor: pointer;
+    padding: 8px 16px;
+    text-decoration: none;
+    color:rgb(95, 61, 48);
+}
+
+.register a:hover {
+    background-color: rgb(173, 130, 113);
+}
+
+/* errors  */
+
+p.error {
+    text-align: left;
+    border-radius: 0.3em;
+    color: red;
+    padding-top: 0;
+}
+
+.input-error {
+    border-left-color: red;
+}

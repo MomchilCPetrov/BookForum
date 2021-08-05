@@ -1,0 +1,35 @@
+#container {
+    margin-top: 20px;
+    background-color: rgb(153, 102, 82);
+    height: 715px;
+}
+
+img {
+    float: left;
+    width: 40%;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#content {
+    box-sizing: border-box;
+    float: left;
+    background-color: rgb(170, 131, 115);
+    width: 54%;
+    margin: 20px;
+    padding: 1%;
+}
+
+#content p {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#content a {
+    cursor: pointer;
+    text-decoration: none;
+    color:rgb(153, 102, 82);
+}
+#content a:hover {
+    color: rgb(110, 70, 54)
+}
