@@ -1,0 +1,76 @@
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.book-container {
+    background-color: rgb(173, 130, 113);
+    margin-bottom: 2%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.img-container {
+    float: left;
+    width: 20%;
+    min-width: 180px;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 2%;
+
+}
+
+img {
+    height: 250px;
+    width: 180px;
+}
+
+.info {
+    float: left;
+    width: 80%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 2%;
+    background-color: rgb(173, 130, 113);
+}
+
+h4 {
+    text-align: center;
+    border-bottom: 1px solid rgb(110, 70, 54);
+    padding-bottom: 10px;
+}
+/*
+.btn-container {
+    float: left;
+    width: 100%;
+    display: flex;
+    background-color: rgb(173, 130, 113);
+}
+
+a {
+    margin: auto;
+    cursor: pointer;
+    padding: 8px 16px;
+    text-decoration: none;
+    color:black;
+    border: 1px solid rgb(110, 70, 54);
+    background-color: rgb(206, 184, 176);
+}
+a:hover {
+    background-color: rgb(153, 102, 82);
+}
+*/
+
+.description {
+    float: left;
+    width: 100%;
+    background-color: rgb(173, 130, 113);
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    box-sizing: border-box;
+    text-align: justify;
+    text-indent: 20px;
+}

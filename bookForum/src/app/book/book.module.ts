@@ -4,6 +4,7 @@ import { BooksComponent } from './books/books.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { BookRoutingModule } from './book-routing.module';
+import { MyBooksComponent } from './my-books/my-books.component';
 
 
 
@@ -11,7 +12,8 @@ import { BookRoutingModule } from './book-routing.module';
   declarations: [
     BooksComponent,
     BookDetailsComponent,
-    AddBookComponent
+    AddBookComponent,
+    MyBooksComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { BookRoutingModule } from './book-routing.module';
   exports: [
     BooksComponent,
     BookDetailsComponent,
-    AddBookComponent
+    AddBookComponent,
+    MyBooksComponent
   ]
 })
 export class BookModule { }
