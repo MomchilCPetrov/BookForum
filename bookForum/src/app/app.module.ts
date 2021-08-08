@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BookModule } from './book/book.module';
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
+import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { UserModule } from './user/user.module';
     BookModule,
     CoreModule,
     HomeModule,
-    UserModule
+    UserModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

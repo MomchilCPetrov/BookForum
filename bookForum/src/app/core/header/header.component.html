@@ -10,25 +10,25 @@
             <li>
                 <a routerLink="/books">Books</a>
             </li>
-            <li>
+            <li *ngIf="isLogged">
                 <a routerLink="/add-book">Add book</a>
             </li>
-            <li>
+            <li *ngIf="isLogged">
                 <a routerLink="/my-books">My books</a>
             </li>
         </ul>
     </nav>
     <div  class="user-navbar">
         <ul>
-            <li>
+            <li *ngIf="!isLogged">
                 <a routerLink="/login">Login</a>
             </li>
-            <li>
+            <li *ngIf="!isLogged">
                 <a routerLink="/register">Register</a>
             </li>
-            <li>Wecome, Momchil</li>
-            <li>
-                <a>Logout</a>
+            <li *ngIf="isLogged">Wecome, {{firstName}}</li>
+            <li *ngIf="isLogged">
+                <a (click)="logout()">Logout</a>
             </li>
         </ul>
     </div>
