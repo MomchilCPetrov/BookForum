@@ -17,10 +17,11 @@ export class Auth implements CanActivate {
 
         let authRedirectUrl = autheticationFailUrl;
         if (authenticationRequired) {
+            console.log(route.url);
             const loginRedirectUrl = route.url.reduce((accu, curr) => `${accu}/${curr.path}` , '');
             authRedirectUrl += `?redirectUrl=${loginRedirectUrl}`;
         }
-
+        console.log(authRedirectUrl)
         return this.router.parseUrl(authRedirectUrl || '/');
     }
 

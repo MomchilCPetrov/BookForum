@@ -10,6 +10,7 @@
     margin-bottom: 2%;
     height: 350px;
     border-radius: 10px;
+    box-shadow: 1px 1px 16px 3px rgb(110, 70, 54);
 }
 
 .img-container {

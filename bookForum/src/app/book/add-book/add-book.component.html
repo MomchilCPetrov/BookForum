@@ -1,51 +1,65 @@
 <div class="container">
-    <form class="add-book" action="" method="post">
+    <form [formGroup]="form" class="add-book" action="" method="post" (ngSubmit)="onSubmit()">
 
         <fieldset>
             <h2>Add book:</h2>
             <p class="field">
                 <label for="title">Title:</label>
-                <input class="input-error" type="text" name="title" id="name">
+                <input class="input-error" type="text" name="title" id="title" formControlName="title">
             </p>
-            <!--<p class="error">
-                Title is required!
-            </p>-->
+            <ng-container *ngIf="form.controls.title?.invalid && form.controls.title?.touched">
+                <p *ngIf="form.controls.title?.errors?.required" class="error">
+                    Title is required!
+                </p>
+            </ng-container>
             <p class="field">
                 <label for="img">Image:</label>
-                <input class="input-error" type="text" name="img" id="img">
+                <input class="input-error" type="text" name="img" id="img" formControlName="img">
             </p>
-            <!--<p class="error">
-                Image is required!
-            </p>-->
+            <ng-container *ngIf="form.controls.img?.invalid && form.controls.img?.touched">
+                <p *ngIf="form.controls.img?.errors?.required" class="error">
+                    Img is required!
+                </p>
+            </ng-container>
             <p class="field">
                 <label for="author">Author:</label>
-                <input class="input-error" type="text" name="author" id="author">
+                <input class="input-error" type="text" name="author" id="author" formControlName="author">
             </p>
-            <!--<p class="error">
-                Author is required!
-            </p>-->
+            <ng-container *ngIf="form.controls.author?.invalid && form.controls.author?.touched">
+                <p *ngIf="form.controls.author?.errors?.required" class="error">
+                    Author is required!
+                </p>
+            </ng-container>
             <p class="field">
                 <label for="publishing-date">Published in:</label>
-                <input class="input-error" type="text" name="publishing-date" id="publishing-date">
+                <input class="input-error" type="text" name="publishing-date" id="publishing-date" formControlName="publishing-date">
             </p>
-            <!--<p class="error">
-                Date of publishsing is required!
-            </p>-->
+            <ng-container *ngIf="form.get('publishing-date')?.invalid && form.get('publishing-date')?.touched">
+                <p *ngIf="form.get('publishing-date')?.errors?.required" class="error">
+                    Date of publishing is required!
+                </p>
+            </ng-container>
             <p class="field">
                 <label for="genre">Genre:</label>
-                <input class="input-error" type="text" name="genre" id="genre">
+                <input class="input-error" type="text" name="genre" id="genre" formControlName="genre">
             </p>
-            <!--<p class="error">
-                Genre is required!
-            </p>-->
+            <ng-container *ngIf="form.controls.genre?.invalid && form.controls.genre?.touched">
+                <p *ngIf="form.controls.genre?.errors?.required" class="error">
+                    Genre is required!
+                </p>
+            </ng-container>
             <p class="field">
                 <label for="description">Description:</label>
-                <textarea class="input-error" name="description" id="descriprion"></textarea>
+                <textarea class="input-error" name="description" id="descriprion" formControlName="description"></textarea>
             </p>
-            <!--<p class="error">
-                Description  is required!
-            </p>-->
-            
+            <ng-container *ngIf="form.controls.description?.invalid && form.controls.description?.touched">
+                <p *ngIf="form.controls.description?.errors?.required" class="error">
+                    Description is required!
+                </p>
+            </ng-container>
+            <p *ngIf="errorMessage" class="error">
+                {{errorMessage}}
+            </p>
             <button>Add book</button>
 
         </fieldset>

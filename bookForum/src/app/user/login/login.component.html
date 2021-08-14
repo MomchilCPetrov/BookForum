@@ -1,31 +1,37 @@
 <div class="container">
-    <form class="login" action="" method="post">
+    <form [formGroup]="form" class="login" action="" method="post" (ngSubmit)="login()">
 
         <fieldset>
             <h2>Login Form</h2>
 
             <p class="field">
                 <label for="email">Email:</label>
-                <input #emailInput class="input-error" type="email" name="email" id="email" placeholder="ivan_ivanov@gmail.com">
+                <input #emailInput class="input-error" type="email" name="email" id="email" placeholder="ivan_ivanov@gmail.com" formControlName="email">
             </p>
-            <!--<p class="error">
-                Email is required!
-            </p> -->
-            <!-- <p class="error">
-                Email is not valid!
-            </p> -->
-
+            <ng-container *ngIf="form.controls.email.invalid && form.controls.email.touched">
+                <p *ngIf="form.controls.email?.errors?.required" class="error">
+                    Email is required!
+                </p>
+                <p *ngIf="form.controls.email?.errors?.email" class="error">
+                    Email is not valid!
+                </p>
+            </ng-container>
             <p class="field">
                 <label for="password">Password:</label>
-                <input #passwordInput type="password" name="password" id="password" placeholder="******">
+                <input #passwordInput type="password" name="password" id="password" placeholder="******" formControlName="password">
             </p>
-            <!-- <p class="error">
-                Password is required!
+            <ng-container *ngIf="form.controls.password?.invalid && form.controls.password?.touched">
+                <p *ngIf="form.controls.password?.errors?.required" class="error">
+                    Password is required!
+                </p>
+                <p *ngIf="form.controls.password?.errors?.minlength" class="error">
+                    Password must be at least 6 characters!
+                </p>
+            </ng-container>
+            <p *ngIf="errorMessage" class="error">
+                {{errorMessage}}
             </p>
-            <p class="error">
-                Password must be at least 4 characters!
-            </p> -->
-            <button (click)="login(emailInput.value, passwordInput.value)">Login</button>
+            <button>Login</button>
             <p class="text-center">
                 Don't have an account?
                 <a routerLink="/register">Register</a>

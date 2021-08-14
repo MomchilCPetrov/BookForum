@@ -26,7 +26,7 @@
             <li *ngIf="!isLogged">
                 <a routerLink="/register">Register</a>
             </li>
-            <li *ngIf="isLogged">Wecome, {{firstName}}</li>
+            <li *ngIf="isLogged">Wecome, {{username}} </li>
             <li *ngIf="isLogged">
                 <a (click)="logout()">Logout</a>
             </li>

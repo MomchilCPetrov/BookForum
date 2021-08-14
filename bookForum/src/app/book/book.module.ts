@@ -5,6 +5,7 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { BookRoutingModule } from './book-routing.module';
 import { MyBooksComponent } from './my-books/my-books.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,8 @@ import { MyBooksComponent } from './my-books/my-books.component';
   ],
   imports: [
     CommonModule,
-    BookRoutingModule
+    BookRoutingModule,
+    ReactiveFormsModule
   ],
   exports: [
     BooksComponent,
