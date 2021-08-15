@@ -10,7 +10,7 @@ Users can login in their accounts in the login page. The login operation require
 
 Register
 
-New user can register in the register page. The register operation requires writing email, username, password and repeat password. All fields are required. There is form validation which ensures that the email is in the right format, the name and the password are the required length. The password and the repeat password have to be the same.
+New user can register in the register page. The register operation requires writing email, username, password and repeat password. All fields are required. There is form validation which ensures that the email is in the right format, the name and the password are the required length. The password and the repeat password have to be the same. If there is registrated user with the same data, there will be a message describing it.
 
 Books
 
