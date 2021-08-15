@@ -44,12 +44,7 @@ export class UserService {
   }
 
   logout() {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'user-token': JSON.parse(this.localStorage.getItem('user')!)['user-token']
-      })
-    };
-    return this.http.get(apiURL + '/api/users/logout', httpOptions).pipe(
+    return this.http.get(apiURL + '/api/users/logout').pipe(
       tap(() => this.localStorage.removeItem('user'))
     )
   }

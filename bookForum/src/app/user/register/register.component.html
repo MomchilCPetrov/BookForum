@@ -50,6 +50,9 @@
                     Passwords don't match!
                 </p>
             </ng-container>
+            <p *ngIf="errorMessage" class="error">
+                {{errorMessage}}
+            </p>
             <button [disabled]="form.invalid">Register</button>
             <p class="text-center">
                 Have an account?

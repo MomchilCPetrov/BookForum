@@ -13,6 +13,7 @@ import { UserService } from '../user.service';
 export class RegisterComponent {
 
   form: FormGroup;
+  errorMessage: string = "";
 
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router) {
     this.form = this.fb.group({
@@ -29,7 +30,9 @@ export class RegisterComponent {
     }
     this.userService.register(this.form.value.name, this.form.value.email, this.form.value.password).subscribe({
       next: () => this.router.navigate(['/home']),
-      error: (error) => console.log(error),
+      error: (error) => {
+        this.errorMessage = error.error.message;
+      }
 
     })
   }
